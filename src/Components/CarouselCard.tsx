@@ -3,15 +3,17 @@ import { Card } from "./Styles";
 
 const CarouselCard = () => {
   return (
-    <Card>
-      <div className="card">
-        <div className="container">
-          <h4>
-            <b>Carousel Card</b>
-          </h4>
-          <br />
-          <p>Swipe left</p>
-          <CarouselButton />
+    <Card draggable={false}>
+      <div className="card-body">
+        <h4>
+          <b>Project Title</b>
+        </h4>
+        <p>Details: </p>
+        <p>Date: </p>
+        <p>Type: </p>
+        <CarouselButton />
+        <div className="card-footer">
+          <p>Date: </p>
         </div>
       </div>
     </Card>
