@@ -1,16 +1,20 @@
 import CarouselButton from "./CarouselButton";
 import { Card } from "./Styles";
 
-const CarouselCard = () => {
+interface cardProps {
+  cardNumber: number;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+const CarouselCard = ({ cardNumber, imageAlt }: cardProps) => {
   return (
     <Card draggable={false}>
       <div className="card-body">
         <h4>
-          <b>Project Title</b>
+          <b>Project {cardNumber}: </b>
+          {imageAlt}
         </h4>
-        <p>Details: </p>
-        <p>Date: </p>
-        <p>Type: </p>
         <CarouselButton />
         <div className="card-footer">
           <p>Date: </p>

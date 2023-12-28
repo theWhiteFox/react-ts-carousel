@@ -30,6 +30,7 @@ export const Card = styled.div`
   max-width: 400px;
   border-radius: 5px;
   background-color: pink;
+  position: relative;
 
   .card-body {
     padding-top: 10px 0;
@@ -44,6 +45,8 @@ export const Card = styled.div`
     flex-direction: column;
     background-color: red;
     width: 100%;
+    bottom: 0;
+    position: absolute;
   }
 `;
 
