@@ -1,7 +1,6 @@
-import { useRef } from "react";
 import CarouselCard from "./CarouselCard";
 import { InnerSlider, SliderContainer } from "./Styles";
-import { getRefValue } from "../lib/hooks/useSwipe";
+
 const items = [
   {
     imageSrc: "/pic1.jpeg",
@@ -26,13 +25,6 @@ const items = [
 ];
 
 const Carousel = () => {
-  // let's say we set the initial value with a type of `number` in `useRef`
-  const numberRef = useRef(0);
-
-  // when we use `getRefValue` to get the value of the ref
-  // TypeScript would then assume this would return a type of `number`
-  getRefValue(numberRef);
-
   return (
     <>
       <SliderContainer>
