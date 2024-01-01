@@ -1,5 +1,5 @@
 import CarouselCard from "./CarouselCard";
-import { InnerSlider, SliderContainer } from "./Styles";
+import { CarouselTrack, CarouselContainer } from "./Styles";
 import { getRefValue, useStateRef } from "../lib/Hooks";
 import { useRef, useState } from "react";
 import { CardProps } from "./CarouselCard";
@@ -129,8 +129,8 @@ const Carousel = ({ items }: Props) => {
 
   return (
     <>
-      <SliderContainer onTouchStart={onTouchStart} onMouseDown={onTouchStart}>
-        <InnerSlider
+      <CarouselContainer onTouchStart={onTouchStart} onMouseDown={onTouchStart}>
+        <CarouselTrack
           ref={containerRef}
           className={`${isSwiping ? "is-swiping" : ""}`}
           style={{ transform: `translate3d(${offsetX}px, 0, 0)` }}
@@ -138,12 +138,12 @@ const Carousel = ({ items }: Props) => {
           {items.map((item, index) => (
             <CarouselCard
               width={getBreakPoint(width)}
-              key={item.cardNumber || index}
+              key={index}
               {...item}
             ></CarouselCard>
           ))}
-        </InnerSlider>
-      </SliderContainer>
+        </CarouselTrack>
+      </CarouselContainer>
     </>
   );
 };

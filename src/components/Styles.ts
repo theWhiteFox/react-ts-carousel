@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { ButtonProps } from "./Button";
 
-export const SliderContainer = styled.div`
+export const CarouselContainer = styled.div`
   width: 100%;
   height: 350px;
   position: absolute;
@@ -15,8 +15,7 @@ export const SliderContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const InnerSlider = styled.ul`
-  /* width: 150%; */
+export const CarouselTrack = styled.ul`
   display: flex;
   gap: 10px;
   position: absolute;
@@ -34,11 +33,12 @@ export const InnerSlider = styled.ul`
 `;
 
 export const Card = styled.li`
+  flex: 0 0 auto;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 100%;
   height: 300px;
-  max-width: 400px;
+  /* max-width: 400px; */
   border-radius: 5px;
   background-color: pink;
   position: relative;

@@ -1,26 +1,27 @@
 import Button from "./Button";
 import { Card } from "./Styles";
 export interface CardProps {
-  cardNumber: number;
-  projectSrc: string;
-  projectName: string;
+  name: string;
+  description: string;
+  language: string;
+  url: string;
   width?: number | string | undefined;
 }
 
-const CarouselCard = ({ cardNumber, projectSrc, projectName }: CardProps) => {
+const CarouselCard = ({ name, description, language, url }: CardProps) => {
   return (
     <>
       <Card draggable={false}>
         <div className="card-body">
           <h4>
-            <b>Project {cardNumber}: </b>
-            {projectName}
+            <b>Project: {name} </b>
           </h4>
-          <Button onClick={() => window.open(`${projectSrc}`, "_blank")}>
-            {projectName} Repo
+          <p>language: {language}</p>
+          <Button onClick={() => window.open(`${url}`, "_blank")}>
+            {name}
           </Button>
           <div className="card-footer">
-            <p>Date: </p>
+            <p>Description: {description}</p>
           </div>
         </div>
       </Card>

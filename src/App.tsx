@@ -2,31 +2,37 @@ import "./App.css";
 import Carousel from "./components/Carousel";
 import "./App.css";
 
-const items = [
+const carouselItems = [
   {
-    cardNumber: 1,
-    projectSrc: "https://www.google.com/",
-    projectName: "Google",
+    name: "Vite-React-TS-Redux-boilerplate",
+    description: "A boilerplate to get set up quickly with a complex web app",
+    language: "JavaScript",
+    url: "https://github.com/theWhiteFox/Vite-React-TS-Redux-boilerplate",
   },
   {
-    cardNumber: 2,
-    projectSrc: "/pic2.jpeg",
-    projectName: "A rock formation",
+    
+    name: "theWhiteFox blog",
+    description: "My Website built using Gatsby",
+    language: "Ruby",
+    url: "https://github.com/theWhiteFox/theWhiteFox",
   },
   {
-    cardNumber: 3,
-    projectSrc: "/pic3.jpeg",
-    projectName: "Some flowers",
+    name: "python-data-analysis",
+    description: "Notebooks and scripts for data analysis using Python.",
+    language: "Python",
+    url: "https://github.com/someuser/python-data-analysis",
   },
   {
-    cardNumber: 4,
-    projectSrc: "/pic4.jpeg",
-    projectName: "An egyptian wall painting",
+    name: "angular-app",
+    description: "A sample Angular application with CRUD operations.",
+    language: "TypeScript",
+    url: "https://github.com/someuser/angular-app",
   },
   {
-    cardNumber: 5,
-    projectSrc: "/pic5.jpeg",
-    projectName: "A butterfly on a leaf",
+    name: "full-stack-project",
+    description: "A full-stack web application project with React and Node.js.",
+    language: "JavaScript",
+    url: "https://github.com/someuser/full-stack-project",
   },
 ];
 
@@ -34,7 +40,7 @@ function App() {
   return (
     <>
       <h1>React TypeScript Carousel</h1>
-      <Carousel items={items} />
+      <Carousel items={carouselItems} />
       <p className="read-the-docs">A Draggable Carousel</p>
     </>
   );
