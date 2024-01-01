@@ -4,7 +4,7 @@ import { getRefValue, useStateRef } from "../lib/Hooks";
 import { useRef, useState } from "react";
 import { CardProps } from "./CarouselCard";
 import { getTouchEventData } from "../lib/Dom";
-import { useWindowSize } from "../lib/useWindowSize";
+// import { useWindowSize } from "../lib/useWindowSize";
 
 // exported so we can use later in tests
 export type Props = {
@@ -21,21 +21,21 @@ export type Props = {
 
 const MIN_SWIPE_REQUIRED = 40;
 
-const getBreakPoint = (windowWidth: number) => {
-  if (windowWidth) {
-    if (windowWidth < 480) {
-      return "100%";
-    } else if (windowWidth < 1024) {
-      return "50%";
-    } else if (windowWidth < 1200) {
-      return "33.3%";
-    } else {
-      return "33.3%";
-    }
-  } else {
-    return undefined;
-  }
-};
+// const getBreakPoint = (windowWidth: number) => {
+//   if (windowWidth) {
+//     if (windowWidth < 480) {
+//       return "100%";
+//     } else if (windowWidth < 1024) {
+//       return "50%";
+//     } else if (windowWidth < 1200) {
+//       return "33.3%";
+//     } else {
+//       return "33.3%";
+//     }
+//   } else {
+//     return undefined;
+//   }
+// };
 
 const Carousel = ({ items }: Props) => {
   const containerRef = useRef<HTMLUListElement>(null);
@@ -125,7 +125,7 @@ const Carousel = ({ items }: Props) => {
   //   setOffsetX(-(containerWidth * index));
   // };
 
-  const { width } = useWindowSize();
+  // const { width } = useWindowSize();
 
   return (
     <>
@@ -137,7 +137,7 @@ const Carousel = ({ items }: Props) => {
         >
           {items.map((item, index) => (
             <CarouselCard
-              width={getBreakPoint(width)}
+              // width={getBreakPoint(width)}
               key={index}
               {...item}
             ></CarouselCard>

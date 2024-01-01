@@ -32,6 +32,11 @@ export const CarouselTrack = styled.ul`
   }
 `;
 
+export const CarouselItem = styled.div`
+  flex: 0 0 auto;
+  width: 100%;
+`;
+
 export const Card = styled.li`
   flex: 0 0 auto;
   width: 100%;

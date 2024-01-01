@@ -1,5 +1,5 @@
 import "./App.css";
-import Carousel from "./components/Carousel";
+import CarouselDnd from "./components/Carousel";
 import "./App.css";
 
 const carouselItems = [
@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       <h1>React TypeScript Carousel</h1>
-      <Carousel items={carouselItems} />
+      <CarouselDnd items={carouselItems} />
       <p className="read-the-docs">A Draggable Carousel</p>
     </>
   );

@@ -5,7 +5,7 @@ export interface CardProps {
   description: string;
   language: string;
   url: string;
-  width?: number | string | undefined;
+  // width?: number | string | undefined;
 }
 
 const CarouselCard = ({ name, description, language, url }: CardProps) => {
